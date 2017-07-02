@@ -7,7 +7,7 @@
 # you're doing.
 Vagrant.configure("2") do |config|
     config.vm.provision "ansible", run: "always" do |ansible|
-    ansible.playbook = "configuracion.yml"
+    ansible.playbook = "playbook.yml"
     end
   
     config.vm.network :public_network, :bridge=>"eth0"
